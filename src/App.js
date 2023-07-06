@@ -2,13 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 class Member extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "Minh Hieu",
-      age: "20",
-    };
-  }
+  state = {
+    name: "Minh Hieu",
+    age: "20",
+  };
+
   render() {
     return (
       <div>
@@ -20,9 +18,11 @@ class Member extends React.Component {
 }
 
 function App() {
-  return <div>
-    <Member/>
-  </div>;
+  return (
+    <div>
+      <Member />
+    </div>
+  );
 }
 
 export default App;
