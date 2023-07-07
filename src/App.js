@@ -1,44 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-class InputForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state ={
-      value: "",
-      submit: "",
-    };
-  }
+import { Navbar, NavbarBrand } from "reactstrap";
 
-  handleValue = (event) => {
-    this.setState({
-      value: event.target.value,
-    });
-  };
-  handleSubmit = () => {
-    this.setState({
-      submit: this.state.value,
-    });
-  };
-
-  render(){
-    return(
-      <div>
-        <input type="text" value={this.state.value}  onChange={this.handleValue}/>
-        <button type="button" onClick={this.handleSubmit} > Change </button>
-        <h3>{this.state.submit}</h3>
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Navbar dark color="primary">
+          <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+          </div>
+        </Navbar>
       </div>
-    )
+    );
   }
-}
-
-function App() {
-  return (
-    <div>
-      <InputForm />
-    </div>
-  );
 }
 
 export default App;
