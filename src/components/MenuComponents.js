@@ -34,7 +34,7 @@ const Menu = (props) => {
     )
     
   });
-  return <div className="row d-flex justify-content-center">{menu}</div>;
+  return <div className="row d-flex justify-content-center ">{menu}</div>;
 };
 
 // cahcs 2 
