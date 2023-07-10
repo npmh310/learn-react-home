@@ -80,6 +80,13 @@
   min-height:400px;
 }
 
+.nav-item{
+  margin-right: 50px;
+}
+.nav-link{
+  font-size: 20px;
+}
+
 .footer{
   background-color: #D1C4E9;
   margin:0px auto;
@@ -100,4 +107,33 @@ address{
 
 .navbar-dark {
   background-color: #512DA8;
+}
+
+/* footer new */
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #007bff;
+}
+
+.fa {
+  font-size: 20px;
+  line-height: 1;
 }
