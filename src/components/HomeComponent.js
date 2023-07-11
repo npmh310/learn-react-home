@@ -1,11 +1,46 @@
-import React from 'react';
+import React from "react";
+import {
+  Card,
+  CardBody,
+  CardImg,
+  CardSubtitle,
+  CardTitle,
+  CardText,
+} from "reactstrap";
 
-function Home(props) {
-    return(
-      <div className="container">
-        <h4>Con cac gi z kh biet</h4>
-      </div>
-    );
+function RenderCard({ item }) {
+  return (
+    <div>
+          <Card>
+            <CardImg width="100%"
+          style={{ padding: "10px" }} src={item.image} alt={item.name} />
+            <CardBody>
+            <CardTitle>{item.name}</CardTitle>
+            {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
+            <CardText>{item.description}</CardText>
+            </CardBody>
+        </Card>
+
+    </div>
+  );
 }
 
-export default Home; 
+function Home(props) {
+  return (
+    <div className="container">
+      <div className="row justify-content-center ">
+        <div className="col-md-3 m-3">
+          <RenderCard item={props.dish} />
+        </div>
+        <div className="col-md-3 m-3">
+          <RenderCard item={props.promotion} />
+        </div>
+        <div className="col-md-3 m-3">
+          <RenderCard item={props.leader} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
