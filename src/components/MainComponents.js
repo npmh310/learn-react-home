@@ -41,6 +41,23 @@ class Main extends React.Component {
       );
     }
 
+
+    //Click theo id
+    // router 4
+    const DishWithId = ({match}) => {
+      return(
+          <DishDetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
+            comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
+      );
+    };
+// router 6
+    // const DishWithId= ()=>{
+    //   const {dishId} = useParams();
+    //   return(
+    //     <DishDetail dish={this.state.dishes.filter((dish)=> dish.id=== parseInt(dishId, 10))[0]}
+    //     comments = {this.state.comments.filter((comments) => comments.dishId === parseInt(dishId,10))}/>
+    //   )
+    // }
     return (
       <div>
         <Header />
@@ -54,7 +71,8 @@ class Main extends React.Component {
             component={() => <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)}/>}
           />
             <Route path="/contact" component={()=> <Contact/>} />
-          {/* <Redirect to="/home" /> */}
+            <Route path='/menu/:dishId' component={DishWithId} />
+          <Redirect to="/home" />
         </Switch>
    
 

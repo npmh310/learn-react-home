@@ -29,7 +29,7 @@ export const LEADERS = [
   {
     id: 3,
     name: 'Meo ne',
-    image: '../assets/images/st,small,845x845-pad,1000x1000,f8f8f8.jpg',
+    image: '../assets/images/depositphotos_53025221-stock-illustration-cat-logo.jpg',
     designation: 'Executive Chef',
     abbr: 'EC',
     featured: true,
