@@ -7,6 +7,7 @@ import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Contact from './ContactComponent';
+import Login from './Login';
 import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
@@ -71,6 +72,9 @@ class Main extends React.Component {
             component={() => <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)}/>}
           />
             <Route path="/contact" component={()=> <Contact/>} />
+            {/* them login */}
+             <Route path="/login" component={()=> <Login/>} />
+             
             <Route path='/menu/:dishId' component={DishWithId} />
           <Redirect to="/home" />
         </Switch>

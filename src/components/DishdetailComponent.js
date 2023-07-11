@@ -61,10 +61,7 @@ function RenderComment({ comments }) {
 const DishDetail = (props) => {
   if (props.dish != null) {
     return (
-     
-        
-       
-        <div className="row mt-5 d-flex justify-content-center">
+      <div className="row mt-5 d-flex justify-content-center">
           <RenderDish dish={props.dish} />
           <RenderComment comments={props.dish.comments} />
         </div>
