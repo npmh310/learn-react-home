@@ -32,7 +32,7 @@ export const DISHES = [
   {
     id: 3,
     name: "Con meo 2",
-    image: "assets/images/5d2e757e470bbbc1894262ab789a4181.jpg",
+    image: "assets/images/anh-nen-meo-cute-chibi-ngau_095453222.jpg",
     category: "dessert",
     featured: true,
     description:

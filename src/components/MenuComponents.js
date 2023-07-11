@@ -5,7 +5,8 @@ import {
   CardImgOverlay,
   CardTitle,
   Breadcrumb,
-  CardBody,BreadcrumbItem
+  CardBody,
+  BreadcrumbItem,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function RenderMenuItem({ dish, onClick }) {
           src={dish.image}
           alt={dish.name}
         />
+       
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
         </CardBody>
@@ -37,22 +39,21 @@ const Menu = (props) => {
   });
   return (
     <div className="container">
-        <div className="row">
-            <Breadcrumb>
-                <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                <BreadcrumbItem active>Menu</BreadcrumbItem>
-            </Breadcrumb>
-            <div className="col-12">
-                <h3>Menu</h3>
-                <hr />
-            </div>                
+      <div className="row">
+        <div className="col-12">
+          <h3>Menu</h3>
+          <hr />
         </div>
-        <div className="row">
-            {menu}
-        </div>
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link to="/home">Home</Link>
+          </BreadcrumbItem>
+          <BreadcrumbItem active>Menu</BreadcrumbItem>
+        </Breadcrumb>
+      </div>
+      <div className="row d-flex justify-content-center">{menu}</div>
     </div>
-);
-
+  );
 };
 
 // cahcs 2

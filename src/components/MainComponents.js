@@ -22,11 +22,11 @@ class Main extends React.Component {
       
     };
   }
-  // onDishSelect(dish) {
-  //   this.setState({
-  //     selectedDish: dish,
-  //   });
-  // }
+  onDishSelect(dish) {
+    this.setState({
+      selectedDish: dish,
+    });
+  }
   // Home
 
   render() {

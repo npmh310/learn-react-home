@@ -6,18 +6,20 @@ import {
   CardText,
   CardBody,
   CardTitle,
+  Breadcrumb,
+  BreadcrumbItem,
 } from "reactstrap";
-
+import { Link } from "react-router-dom";
 function RenderDish({ dish }) {
   if (dish != null)
     return (
       //render ra thằng vừa click vào
-      <div className="col-md-5">
+      <div className="col-md-2">
         <Card>
           <CardImg
             top
             style={{ padding: "10px" }}
-            src={dish.img}
+            src={dish.image}
             alt={dish.name}
           />
           <CardBody>
@@ -58,14 +60,17 @@ function RenderComment({ comments }) {
 
 const DishDetail = (props) => {
   if (props.dish != null) {
-   return (
-      <div className="row mt-5 d-flex justify-content-center">
-        <RenderDish dish={props.dish} />
-        <RenderComment comments={props.dish.comments} />
-      </div>
+    return (
+     
+        
+       
+        <div className="row mt-5 d-flex justify-content-center">
+          <RenderDish dish={props.dish} />
+          <RenderComment comments={props.dish.comments} />
+        </div>
+     
     );
   }
-
 };
 
 export default DishDetail;
